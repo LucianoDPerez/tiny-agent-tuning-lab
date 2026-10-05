@@ -5,10 +5,7 @@ We measured it end-to-end — in a real agent harness, not on static benchmarks.
 
 ## What this is
 
-1. **`chistellm/`** — a 15.7M-param GPT written from scratch (PyTorch, RoPE +
-   RMSNorm + SwiGLU) that generates Spanish jokes. The learning exercise that
-   started it all.
-2. **`tuning/`** — the LoRA fine-tuning pipeline for `XHToken/Spark-X2.5`
+1. **`tuning/`** — the LoRA fine-tuning pipeline for `XHToken/Spark-X2.5`
    (1.7B → 4B): scripts, datasets, evals, and the full lab notebook
    (`docs/BITACORA.md`) plus the reusable recipe (`docs/RECETARIO.md`).
 3. **`benchmarks/`** — failing-first polyglot eval fixtures (TypeScript, Java,
