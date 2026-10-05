@@ -2,7 +2,7 @@
 
 | fixture | base-1.7B | base-4B | 4b-v1 | 4b-v2 | 4b-v3 | notas |
 |---|---|---|---|---|---|---|
-| ts (card Link) | ✅ (346s) | ✅ | ❌ (planifica, no emite edit) | ❌ (corrompe: mezcla 2 cards) | ✅ (reemplazo exacto, ✅) | V2 regresó en TS; V3 lo cura con trace 35B |
+| ts (card Link) | ✅ (346s) | ✅ | ❌ (planifica, no emite edit) | ❌ (corrompe: mezcla 2 cards) | ✅ (reemplazo exacto, ✅) | V2 regresó en TS; V3 lo cura con trace Intern-S2-Preview |
 | java (idempotencia) | ❌ (0 writes) | ❌ (no consulta la clave) | — | ✅ (early-return, PASS) | — (hereda V2) | fallo destilado de Intern-S2-Preview |
 | php (validación 400) | ✅ | ✅ | — | ✅ (PASS) | — (hereda V2) | |
 | go (idempotencia+test) | — | ❌ (0 writes) | — | ✅ (mutex, go test ok) | — (hereda V2) | |
