@@ -78,7 +78,7 @@ Convertir Spark-X2.5-1.7B en un SLM útil para coding agentico en agent-devs (ha
 Veredicto: el 1.7B ejecuta sub-tareas grounded; las abiertas requieren
 descomposición en el harness. Fin del loop SFT.
 
-## Destilación con Intern-S2-Preview (Intern-S2-Preview-35B vía API remota)
+## Destilación con Intern-S2-Preview (Intern-S2-Preview vía API remota)
 - 12B local descartado: emite tool calls como texto (no estructurado) + 2.9 tok/s + prefill 9-11 min (timeouts del harness).
 - Harness apuntado temporalmente a la API Intern (tmp commits: api key por env, bypass de health-checks locales, timeouts elevados).
 - Tracer mejorado: recorder a nivel de stream (texto + calls + results en orden) + limpieza de calls alucinadas ("not a valid tool").
