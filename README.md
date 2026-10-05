@@ -25,7 +25,7 @@ We measured it end-to-end — in a real agent harness, not on static benchmarks.
 | Python idempotency | — | ✅ (honest, test untouched) |
 | Java/Go 3-file | — | ✅ |
 
-Method: baseline first, distill failures with a strong teacher (35B) via
+Method: baseline first, distill failures with a strong teacher (Intern-S2-Preview) via
 stream-level trajectory capture, LoRA (r16, completion-only loss), then
 re-measure on the same fixtures. Q&A rubric: 32 → 30/40 (we stopped chasing
 it — static style scores don't predict agency).

@@ -78,14 +78,14 @@ Convertir Spark-X2.5-1.7B en un SLM útil para coding agentico en agent-devs (ha
 Veredicto: el 1.7B ejecuta sub-tareas grounded; las abiertas requieren
 descomposición en el harness. Fin del loop SFT.
 
-## Destilación con 35B (Intern-S2-Preview-35B vía API remota)
+## Destilación con Intern-S2-Preview (Intern-S2-Preview-35B vía API remota)
 - 12B local descartado: emite tool calls como texto (no estructurado) + 2.9 tok/s + prefill 9-11 min (timeouts del harness).
 - Harness apuntado temporalmente a la API Intern (tmp commits: api key por env, bypass de health-checks locales, timeouts elevados).
 - Tracer mejorado: recorder a nivel de stream (texto + calls + results en orden) + limpieza de calls alucinadas ("not a valid tool").
-- 3 runs angostos con 35B: 2 ✅ completos + 1 con edit perfecto pero turno "fallido" por mecánicas (verifys no bindeadas en algunos attempts). Todos escribieron bien.
+- 3 runs angostos con Intern-S2-Preview: 2 ✅ completos + 1 con edit perfecto pero turno "fallido" por mecánicas (verifys no bindeadas en algunos attempts). Todos escribieron bien.
 - V10 = 13 Q&A V4 + 2 traces reales (5611 + 1689 tokens renderizados). max_length 8192, completion-only loss, 2 epochs.
 
-## V10 (13 Q&A + 2 traces reales 35B, completion-only, ctx 8k, 2 epochs)
+## V10 (13 Q&A + 2 traces reales Intern-S2-Preview, completion-only, ctx 8k, 2 epochs)
 - Tool-eval: 5/6. **Run narrow con V10 GGUF: ✅ TAREA COMPLETA** (read exacto → edit → run_build → verificación ✅). Primer fine-tune que cierra el loop.
 - La destilación de traces reales con prompts de contexto largo SÍ transfiere, donde 30 ejemplos sintéticos no lo hicieron.
 
@@ -116,7 +116,7 @@ descomposición en el harness. Fin del loop SFT.
 - 4b-v1 (mismos datos V11): leyó líneas exactas, planificó en texto, NUNCA emitió el edit. Mismo patrón que 1.7B-V1.
 - Hipótesis: el LoRA sobre Q&A+trajs cortos interfiere con el cierre agentico del 4B base (que ya era bueno: 6/6 tool-eval).
 
-## 4B-V2 (13 Q&A + 5 turns destilados java/go/docker 35B, completion-only, ctx 2560, 2 epochs)
+## 4B-V2 (13 Q&A + 5 turns destilados java/go/docker Intern-S2-Preview, completion-only, ctx 2560, 2 epochs)
 - Entrenó en ~22 min una vez liberada la RAM (un llama-server zombie de 3.7GB causaba thrash). Loss 2.37, acc 61%.
 
 ## 4B-V2 barrió los 3 fallos (java/go/docker ✅; base era ❌❌❌)
@@ -124,7 +124,7 @@ descomposición en el harness. Fin del loop SFT.
 - 4B-V1 narrow ❌ vs base-4B narrow ✅: el LoRA sin destilación políglota regresó el cierre; V2 lo recupera.
 - Pendiente: regresión php/db con V2 + radio 3-archivos (hipótesis sin medir).
 
-## 4B-V3 (Q&A + java/go/docker/ts/python traces 35B, completion-only con fix </think>, ctx 2560)
+## 4B-V3 (Q&A + java/go/docker/ts/python traces Intern-S2-Preview, completion-only con fix </think>, ctx 2560)
 - Q&A: 30/40 (baja vs V2, irrelevante). Tool: 6/6.
 - Real: TS ✅ (cura regresión V2, reemplazo exacto), python ✅ honesto (dict separado, no toca test).
 - V3 = mejor modelo. Uso: tareas grounded 1-3 archivos; ver MATRIX.md (guía de uso con semáforos).

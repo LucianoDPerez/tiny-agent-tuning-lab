@@ -75,7 +75,7 @@
   <rect x="650" y="910" width="460" height="70" rx="10" fill="url(#green)"/>
   <text x="880" y="955" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">7 / 7</text>
 
-  <text x="60" y="1075" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#8b949e">Method: baseline > distill 35B teacher traces > LoRA r16 > re-measure in harness.</text>
+  <text x="60" y="1075" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#8b949e">Method: baseline > distill Intern-S2 teacher traces > LoRA r16 > re-measure in harness.</text>
   <text x="60" y="1112" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#8b949e">Static scores don't predict agency. We measured task completion with green builds.</text>
   <text x="60" y="1162" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="bold" fill="#58a6ff">github.com/LucianoDPerez/tiny-agent-tuning-lab</text>
 </svg>
