@@ -3,6 +3,8 @@
 Can a 4B model become a useful coding agent with LoRA on a MacBook Air?
 We measured it end-to-end — in a real agent harness, not on static benchmarks.
 
+![Base 4B vs fine-tuned 4B-V3 across 7 fixtures](comparison.png)
+
 ## What this is
 
 1. **`tuning/`** — the LoRA fine-tuning pipeline for `XHToken/Spark-X2.5`
