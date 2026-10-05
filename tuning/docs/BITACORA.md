@@ -78,11 +78,11 @@ Convertir Spark-X2.5-1.7B en un SLM útil para coding agentico en agent-devs (ha
 Veredicto: el 1.7B ejecuta sub-tareas grounded; las abiertas requieren
 descomposición en el harness. Fin del loop SFT.
 
-## Destilación con Intern-S2-Preview (Intern-S2-Preview vía API remota)
+## Destilación con Intern-S2-Preview (35B) (35B) (Intern-S2-Preview vía API remota)
 - 12B local descartado: emite tool calls como texto (no estructurado) + 2.9 tok/s + prefill 9-11 min (timeouts del harness).
 - Harness apuntado temporalmente a la API Intern (tmp commits: api key por env, bypass de health-checks locales, timeouts elevados).
 - Tracer mejorado: recorder a nivel de stream (texto + calls + results en orden) + limpieza de calls alucinadas ("not a valid tool").
-- 3 runs angostos con Intern-S2-Preview: 2 ✅ completos + 1 con edit perfecto pero turno "fallido" por mecánicas (verifys no bindeadas en algunos attempts). Todos escribieron bien.
+- 3 runs angostos con Intern-S2-Preview (35B): 2 ✅ completos + 1 con edit perfecto pero turno "fallido" por mecánicas (verifys no bindeadas en algunos attempts). Todos escribieron bien.
 - V10 = 13 Q&A V4 + 2 traces reales (5611 + 1689 tokens renderizados). max_length 8192, completion-only loss, 2 epochs.
 
 ## V10 (13 Q&A + 2 traces reales Intern-S2-Preview, completion-only, ctx 8k, 2 epochs)
@@ -124,7 +124,7 @@ descomposición en el harness. Fin del loop SFT.
 - 4B-V1 narrow ❌ vs base-4B narrow ✅: el LoRA sin destilación políglota regresó el cierre; V2 lo recupera.
 - Pendiente: regresión php/db con V2 + radio 3-archivos (hipótesis sin medir).
 
-## 4B-V3 (Q&A + java/go/docker/ts/python traces Intern-S2-Preview, completion-only con fix </think>, ctx 2560)
+## 4B-V3 (Q&A + java/go/docker/ts/python traces Intern-S2-Preview (35B), completion-only con fix </think>, ctx 2560)
 - Q&A: 30/40 (baja vs V2, irrelevante). Tool: 6/6.
 - Real: TS ✅ (cura regresión V2, reemplazo exacto), python ✅ honesto (dict separado, no toca test).
 - V3 = mejor modelo. Uso: tareas grounded 1-3 archivos; ver MATRIX.md (guía de uso con semáforos).

@@ -74,7 +74,7 @@ harness (sub-tareas de 1 archivo), no en el modelo.
 7. Si el base ya hace la tarea con buen prompt, no lo "arregles" con SFT.
 
 ## Destilación (lo que sí funcionó para agencia)
-- 2-3 traces exitosos de un modelo fuerte (Intern-S2-Preview) con prompts reales de contexto
+- 2-3 traces exitosos de un modelo fuerte (Intern-S2-Preview, 35B, con prompts reales de contexto
   largo > 30 ejemplos sintéticos.
 - Tracer a nivel de stream (texto + calls + results en orden) en el harness;
   filtrar calls alucinadas ("not a valid tool").

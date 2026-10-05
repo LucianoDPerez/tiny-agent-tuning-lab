@@ -21,7 +21,7 @@ No QLoRA on MPS — plain bf16 LoRA (r16), completion-only loss.
 
 ## Current best
 
-- **4B-V3**: 13 Q&A + distilled Intern-S2 traces (java/go/docker/ts/python),
+- **4B-V3**: 13 Q&A + distilled Intern-S2 (35B) traces (java/go/docker/ts/python),
   2 epochs, LR 5e-5, ctx 2560. Rubric 30/40, tool-eval 6/6, closes grounded
   1–3 file tasks across languages (see `../benchmarks/MATRIX.md`).
 - **1.7B-V11**: best small variant for grounded 1-file tasks.
