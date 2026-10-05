@@ -70,7 +70,7 @@ harness (sub-tareas de 1 archivo), no en el modelo.
 4. Entrená solo sobre respuestas del asistente (completion-only loss).
 5. Evaluá checkpoints, no asumas que `final` gana (nuestro loss subió 2.76→3.05
    en la última epoch de V1).
-6. Validá en el harness real: el rubric conversacional no predice agencia.
+6. Validá en agent-devs (harness real): el rubric conversacional no predice agencia.
 7. Si el base ya hace la tarea con buen prompt, no lo "arregles" con SFT.
 
 ## Destilación (lo que sí funcionó para agencia)
