@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#238636"/>
+      <stop offset="1" stop-color="#2ea043"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8957e5"/>
+      <stop offset="1" stop-color="#6e40c9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#2ea043"/>
+
+  <text x="60" y="105" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="bold" fill="#f0f6fc">Tiny Agent Tuning Lab</text>
+  <text x="60" y="150" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#8b949e">Spark-X2.5-4B + LoRA on a MacBook Air M1 16GB — measured in a real agent harness</text>
+
+  <!-- BASE column -->
+  <rect x="60" y="190" width="520" height="830" rx="16" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+  <text x="90" y="250" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#f0f6fc">BASE 4B</text>
+  <text x="90" y="282" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8b949e">Q&amp;A 32/40 · tools 6/6</text>
+  <text x="90" y="312" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8b949e">3 / 6 fixtures pass</text>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="26">
+    <path d="M90 366 l8 8 l14 -16" stroke="#3fb950" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="118" y="380" fill="#3fb950">TS card Link</text>
+    <path d="M90 417 l18 18 M108 417 l-18 18" stroke="#f85149" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <text x="118" y="435" fill="#f85149">Java idempotency</text>
+    <path d="M90 476 l8 8 l14 -16" stroke="#3fb950" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="118" y="490" fill="#3fb950">PHP validation</text>
+    <path d="M90 527 l18 18 M108 527 l-18 18" stroke="#f85149" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <text x="118" y="545" fill="#f85149">Go idempotency</text>
+    <path d="M90 582 l18 18 M108 582 l-18 18" stroke="#f85149" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <text x="118" y="600" fill="#f85149">Docker hardening</text>
+    <path d="M90 641 l8 8 l14 -16" stroke="#3fb950" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="118" y="655" fill="#3fb950">Postgres UNIQUE</text>
+  </g>
+  <text x="90" y="730" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#8b949e">Writes plausible code,</text>
+  <text x="90" y="762" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#8b949e">misses the invariant.</text>
+  <text x="90" y="830" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#8b949e">Plans but never edits.</text>
+  <text x="90" y="862" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#8b949e">Breaks Dockerfiles.</text>
+  <rect x="90" y="910" width="460" height="70" rx="10" fill="url(#red)"/>
+  <text x="320" y="955" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">3 / 6</text>
+
+  <!-- V3 column -->
+  <rect x="620" y="190" width="520" height="830" rx="16" fill="#0d1117" stroke="#2ea043" stroke-width="3"/>
+  <rect x="620" y="190" width="520" height="56" rx="16" fill="#238636"/>
+  <text x="880" y="228" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">OUR FINE-TUNE (V3)</text>
+  <text x="650" y="292" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#f0f6fc">4B-V3 distilled</text>
+  <text x="650" y="324" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8b949e">Q&amp;A 30/40 · tools 6/6</text>
+  <text x="650" y="354" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#3fb950" font-weight="bold">7 / 7 fixtures pass</text>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="26">
+    <path d="M650 408 l8 8 l14 -16" stroke="#3fb950" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="678" y="422" fill="#3fb950">TS card Link</text>
+    <path d="M650 463 l8 8 l14 -16" stroke="#3fb950" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="678" y="477" fill="#3fb950">Java early-return</text>
+    <path d="M650 518 l8 8 l14 -16" stroke="#3fb950" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="678" y="532" fill="#3fb950">PHP validation</text>
+    <path d="M650 573 l8 8 l14 -16" stroke="#3fb950" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="678" y="587" fill="#3fb950">Go + mutex, test ok</text>
+    <path d="M650 628 l8 8 l14 -16" stroke="#3fb950" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="678" y="642" fill="#3fb950">Docker 6/6 checks</text>
+    <path d="M650 683 l8 8 l14 -16" stroke="#3fb950" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="678" y="697" fill="#3fb950">Postgres UNIQUE</text>
+    <path d="M650 738 l8 8 l14 -16" stroke="#3fb950" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="678" y="752" fill="#3fb950">Python, no test-hack</text>
+  </g>
+  <text x="650" y="820" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#8b949e">+ 3-file tasks (java/go)</text>
+  <text x="650" y="852" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#8b949e">+ honest: never edits tests</text>
+  <rect x="650" y="910" width="460" height="70" rx="10" fill="url(#green)"/>
+  <text x="880" y="955" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">7 / 7</text>
+
+  <text x="60" y="1075" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#8b949e">Method: baseline > distill 35B teacher traces > LoRA r16 > re-measure in harness.</text>
+  <text x="60" y="1112" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#8b949e">Static scores don't predict agency. We measured task completion with green builds.</text>
+  <text x="60" y="1162" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="bold" fill="#58a6ff">github.com/LucianoDPerez/tiny-agent-tuning-lab</text>
+</svg>
