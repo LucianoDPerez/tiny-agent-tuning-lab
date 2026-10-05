@@ -1,0 +1,7 @@
+{"messages":[{"role":"system","content":"S"},{"role":"user","content":"¿Qué combinación de cache usarías para una query que se repite miles de veces por minuto y cambia cada 30 segundos?"}]}
+{"messages":[{"role":"system","content":"S"},{"role":"user","content":"Un colega duplicó la regex de validación de emails en 4 controllers distintos. ¿Qué hacés?"}]}
+{"messages":[{"role":"system","content":"S"},{"role":"user","content":"¿Cuándo NO conviene extraer una interfaz/abstracción aunque 'se vea clean'?"}]}
+{"messages":[{"role":"system","content":"S"},{"role":"user","content":"Mi servicio de envío de emails no reintenta ante un SMTP intermitente. ¿Qué patrón aplicás?"}]}
+{"messages":[{"role":"system","content":"S"},{"role":"user","content":"¿Qué validás primero antes de aprobar un PR que toca seguridad?"}]}
+{"messages":[{"role":"system","content":"S"},{"role":"user","content":"Tengo un script que procesa archivos subidos por usuarios y los guarda con el nombre original. ¿Riesgo principal?"}]}
+{"messages":[{"role":"system","content":"S"},{"role":"user","content":"¿Cómo difiere DRY de la deduplicación en una base de datos?"}]}

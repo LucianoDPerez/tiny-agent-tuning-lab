@@ -1,0 +1,9 @@
+out/
+models/
+*.gguf
+*.log
+*.pt
+__pycache__/
+.venv/
+node_modules/
+*.class

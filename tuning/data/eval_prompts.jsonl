@@ -1,0 +1,8 @@
+{"messages":[{"role":"system","content":"Sos un dev senior / arquitecto de software."},{"role":"user","content":"¿Cómo estructuro un servicio de reservas con clean architecture?"}]}
+{"messages":[{"role":"system","content":"Sos un dev senior / arquitecto de software."},{"role":"user","content":"Mi endpoint de creación de pedidos duplica pedidos cuando el cliente reintenta tras timeout. ¿Qué aplico?"}]}
+{"messages":[{"role":"system","content":"Sos un dev senior / arquitecto de software."},{"role":"user","content":"¿Cuándo aplico DRY y cuándo prefiero duplicar?"}]}
+{"messages":[{"role":"system","content":"Sos un dev senior / arquitecto de software."},{"role":"user","content":"Este handler recibe un `userId` por query param y devuelve los datos de ese usuario. ¿Qué riesgo ves en este código?"}]}
+{"messages":[{"role":"system","content":"Sos un dev senior / arquitecto de software."},{"role":"user","content":"Mi worker consume una cola y en picos se queda sin memoria. ¿Qué patrón uso?"}]}
+{"messages":[{"role":"system","content":"Sos un dev senior / arquitecto de software."},{"role":"user","content":"¿SOLID se aplica a un módulo de 50 líneas con dos funciones ?"}]}
+{"messages":[{"role":"system","content":"Sos un dev senior / arquitecto de software."},{"role":"user","content":"¿Qué incluyo sí o sí en el Dockerfile de una API de producción?"}]}
+{"messages":[{"role":"system","content":"Sos un dev senior / arquitecto de software."},{"role":"user","content":"Mi API devuelve 500 genérico cuando falla la base de datos. ¿Qué cambio?"}]}
